@@ -33,5 +33,6 @@
             <artifactId>minacloud-common-jdbc</artifactId>
             <version>${parent.version}</version>
         </dependency>
+
     </dependencies>
 </project>

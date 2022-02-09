@@ -24,7 +24,6 @@ import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
 import com.minacloud.common.base.BaseCmdExecutor;
 import com.minacloud.common.base.query.SingleParamQry;
-import com.minacloud.common.utils.FieldUtil;
 import com.minacloud.upms.convertor.UserCOConvertor;
 import com.minacloud.upms.domain.SysUser;
 import com.minacloud.upms.dto.clientobject.UserCO;
@@ -42,7 +41,7 @@ public class UserFindByOpenIdQryExe implements BaseCmdExecutor<SingleParamQry, R
 
     @Override
     public SingleResponse<UserCO> execute(SingleParamQry cmd) {
-        SysUser sysUser = userGateway.findByField(FieldUtil.getFieldName(SysUser::getOpenId), cmd.getParam());
+        SysUser sysUser = userGateway.findByOpenId(cmd.getParam());
         return SingleResponse.of(userCOConvertor.toSource(sysUser));
     }
 

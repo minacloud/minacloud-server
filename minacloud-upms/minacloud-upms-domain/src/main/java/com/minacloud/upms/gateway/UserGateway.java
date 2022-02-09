@@ -36,9 +36,13 @@ public interface UserGateway {
 
     void removeUser(Long id);
 
-    SysUser findByField(String fieldName, String param);
+    SysUser findByOpenId(String param);
 
     Page<SysUser> findPage();
 
     void updatePassword(Long userId, String password);
+
+    SysUser findByUsername(String param);
+
+    SysUser findByPhone(String param);
 }

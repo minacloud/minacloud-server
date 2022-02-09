@@ -23,7 +23,6 @@ package com.minacloud.upms.command;
 import com.alibaba.cola.dto.SingleResponse;
 import com.minacloud.common.base.BaseCmdExecutor;
 import com.minacloud.common.base.query.SingleParamQry;
-import com.minacloud.common.utils.FieldUtil;
 import com.minacloud.upms.convertor.UserCOConvertor;
 import com.minacloud.upms.domain.SysUser;
 import com.minacloud.upms.dto.clientobject.UserCO;
@@ -41,7 +40,7 @@ public class UserFindByMobileQryExe implements BaseCmdExecutor<SingleParamQry, S
 
     @Override
     public SingleResponse<UserCO> execute(SingleParamQry qry) {
-        SysUser sysUser = userGateway.findByField(FieldUtil.getFieldName(SysUser::getPhone), qry.getParam());
+        SysUser sysUser = userGateway.findByPhone(qry.getParam());
         return SingleResponse.of(userCOConvertor.toSource(sysUser));
     }
 

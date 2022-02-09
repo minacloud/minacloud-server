@@ -4,7 +4,7 @@ spring:
     time-zone: Asia/Shanghai
   # DATABASE CONFIG
   datasource:
-    url: jdbc:mysql://192.168.50.201:3306/user-center?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://127.0.0.1:3306/user-center?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver

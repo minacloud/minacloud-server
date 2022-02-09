@@ -20,6 +20,9 @@ package com.minacloud.upms.gateway;
  * #L%
  */
 
+import cn.hutool.core.util.StrUtil;
+import com.minacloud.common.constant.MinaCloudConstants;
+import com.minacloud.common.utils.PasswordUtil;
 import com.minacloud.upms.convertor.UserDOConvertor;
 import com.minacloud.upms.dataobject.UserDO;
 import com.minacloud.upms.domain.SysUser;
@@ -76,9 +79,11 @@ public class UserGatewayImpl implements UserGateway {
     }
 
     @Override
-    public SysUser findByField(String fieldName, String param) {
-        return null;
+    public SysUser findByOpenId(String param) {
+        UserDO userDO = userRepository.findByOpenId(param);
+        return userDOConvertor.toTarget(userDO);
     }
+
 
     @Override
     public Page<SysUser> findPage() {
@@ -90,7 +95,22 @@ public class UserGatewayImpl implements UserGateway {
 
     @Override
     public void updatePassword(Long userId, String password) {
+        if (StrUtil.isBlank(password)) {
+            password = MinaCloudConstants.DEFAULT_PASSWORD;
+        }
+        password = PasswordUtil.encrypt(password);
         userRepository.updatePassword(userId, password);
+    }
 
+    @Override
+    public SysUser findByUsername(String param) {
+        UserDO userDO = userRepository.findByUsername(param);
+        return userDOConvertor.toTarget(userDO);
+    }
+
+    @Override
+    public SysUser findByPhone(String param) {
+        UserDO userDO = userRepository.findByPhone(param);
+        return userDOConvertor.toTarget(userDO);
     }
 }

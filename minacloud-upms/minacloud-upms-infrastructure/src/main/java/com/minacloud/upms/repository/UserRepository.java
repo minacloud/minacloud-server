@@ -24,18 +24,25 @@ import com.minacloud.upms.dataobject.UserDO;
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
 
 public interface UserRepository extends PagingAndSortingRepository<UserDO, Long> {
 
     @Modifying
-    @Query("update UserDO set enabled=true where id=:id")
-    void enableUser(Long id);
+    @Query("update sys_user set enabled=1 where id=:id")
+    void enableUser(@Param("id") Long id);
 
     @Modifying
-    @Query("update UserDO set enabled=false where id=:id")
-    void disableUser(Long id);
+    @Query("update sys_user set enabled=0 where id=:id")
+    void disableUser(@Param("id") Long id);
 
     @Modifying
-    @Query("update UserDO set password=:password where id=:userId")
-    void updatePassword(Long userId, String password);
+    @Query("update sys_user set password=:password where id=:userId")
+    void updatePassword(@Param("userId") Long userId, @Param("password") String password);
+
+    UserDO findByPhone(String phone);
+
+    UserDO findByOpenId(String openId);
+
+    UserDO findByUsername(String username);
 }
