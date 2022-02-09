@@ -32,10 +32,11 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDeleteCmd extends Command {
-    private Long id;
+public class UserUpdatePwdCmd extends Command {
+    private Long userId;
+    private String oldPassword;
+    private String newPassword;
+    private String confirmPassword;
 
-    public static UserDeleteCmd of(Long id) {
-        return new UserDeleteCmd(id);
-    }
+
 }

@@ -20,14 +20,19 @@ package com.minacloud.upms.api;
  * #L%
  */
 
+import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
 import com.minacloud.common.base.query.IdQry;
+import com.minacloud.common.base.query.SingleParamQry;
 import com.minacloud.upms.dto.clientobject.UserCO;
 import com.minacloud.upms.dto.cmd.UserAddCmd;
 import com.minacloud.upms.dto.cmd.UserDeleteCmd;
 import com.minacloud.upms.dto.cmd.UserUpdateCmd;
+import com.minacloud.upms.dto.cmd.UserUpdatePwdCmd;
+
+import java.util.Set;
 
 public interface UserService {
     Response createUser(UserAddCmd cmd);
@@ -38,6 +43,21 @@ public interface UserService {
 
     SingleResponse<UserCO> findById(IdQry qry);
 
-    PageResponse<UserCO> findPage(IdQry qry);
+    PageResponse<UserCO> findPage();
 
+    SingleResponse<UserCO> findByUsername(SingleParamQry qry);
+
+    SingleResponse<UserCO> findByMobile(SingleParamQry qry);
+
+    SingleResponse<UserCO> findByOpenId(SingleParamQry openId);
+
+    Response setRoleToUser(Long id, Set<Long> roleIds);
+
+    MultiResponse<UserCO> findRolesByUserId(IdQry qry);
+
+    Response enableUser(IdQry qry);
+
+    Response disableUser(IdQry qry);
+
+    Response updatePassword(UserUpdatePwdCmd cmd);
 }

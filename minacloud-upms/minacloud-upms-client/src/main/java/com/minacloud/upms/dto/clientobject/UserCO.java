@@ -44,4 +44,8 @@ public class UserCO extends BaseCO<Long> {
     private String type;
     private String openId;
 
+    private String oldPassword;
+    private String newPassword;
+    private String confirmPassword;
+
 }

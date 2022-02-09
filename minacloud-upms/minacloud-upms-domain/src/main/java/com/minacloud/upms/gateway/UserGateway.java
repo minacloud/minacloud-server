@@ -21,6 +21,7 @@ package com.minacloud.upms.gateway;
  */
 
 import com.minacloud.upms.domain.SysUser;
+import org.springframework.data.domain.Page;
 
 public interface UserGateway {
     void create(SysUser user);
@@ -28,4 +29,16 @@ public interface UserGateway {
     void update(SysUser user);
 
     SysUser findById(Long userId);
+
+    void enableUser(Long id);
+
+    void disableUser(Long id);
+
+    void removeUser(Long id);
+
+    SysUser findByField(String fieldName, String param);
+
+    Page<SysUser> findPage();
+
+    void updatePassword(Long userId, String password);
 }

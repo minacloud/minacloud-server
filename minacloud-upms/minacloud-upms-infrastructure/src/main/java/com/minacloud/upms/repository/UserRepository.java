@@ -21,8 +21,21 @@ package com.minacloud.upms.repository;
  */
 
 import com.minacloud.upms.dataobject.UserDO;
+import org.springframework.data.jdbc.repository.query.Modifying;
+import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface UserRepository extends PagingAndSortingRepository<UserDO, Long> {
 
+    @Modifying
+    @Query("update UserDO set enabled=true where id=:id")
+    void enableUser(Long id);
+
+    @Modifying
+    @Query("update UserDO set enabled=false where id=:id")
+    void disableUser(Long id);
+
+    @Modifying
+    @Query("update UserDO set password=:password where id=:userId")
+    void updatePassword(Long userId, String password);
 }

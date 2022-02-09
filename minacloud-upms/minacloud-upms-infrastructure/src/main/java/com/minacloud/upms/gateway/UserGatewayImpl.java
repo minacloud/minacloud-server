@@ -25,9 +25,13 @@ import com.minacloud.upms.dataobject.UserDO;
 import com.minacloud.upms.domain.SysUser;
 import com.minacloud.upms.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -54,5 +58,39 @@ public class UserGatewayImpl implements UserGateway {
     public SysUser findById(Long userId) {
         Optional<UserDO> byId = userRepository.findById(userId);
         return userDOConvertor.toTarget(byId.orElse(null));
+    }
+
+    @Override
+    public void enableUser(Long id) {
+        userRepository.enableUser(id);
+    }
+
+    @Override
+    public void disableUser(Long id) {
+        userRepository.disableUser(id);
+    }
+
+    @Override
+    public void removeUser(Long id) {
+
+    }
+
+    @Override
+    public SysUser findByField(String fieldName, String param) {
+        return null;
+    }
+
+    @Override
+    public Page<SysUser> findPage() {
+        PageRequest pageable = PageRequest.of(1, 10);
+        Page<UserDO> all = userRepository.findAll(pageable);
+        List<SysUser> sysUsers = userDOConvertor.toTarget(all.toList());
+        return new PageImpl(sysUsers, pageable, all.getTotalElements());
+    }
+
+    @Override
+    public void updatePassword(Long userId, String password) {
+        userRepository.updatePassword(userId, password);
+
     }
 }
