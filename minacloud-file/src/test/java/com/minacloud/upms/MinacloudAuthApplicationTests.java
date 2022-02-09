@@ -1,8 +1,8 @@
-package com.minacloud.gateway;
+package com.minacloud.upms;
 
 /*-
  * #%L
- * minacloud-gateway
+ * minacloud-file
  * %%
  * Copyright (C) 2021 - 2022 minacloud
  * %%
@@ -20,14 +20,14 @@ package com.minacloud.gateway;
  * #L%
  */
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootApplication
-public class MinacloudGatewayApplication {
+@SpringBootTest
+class MinacloudAuthApplicationTests {
 
-    public static void main(String[] args) {
-        SpringApplication.run(MinacloudGatewayApplication.class, args);
+    @Test
+    void contextLoads() {
     }
 
 }

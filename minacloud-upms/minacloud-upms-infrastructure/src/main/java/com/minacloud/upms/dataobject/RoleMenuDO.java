@@ -1,8 +1,8 @@
-package com.minacloud.gateway;
+package com.minacloud.upms.dataobject;
 
 /*-
  * #%L
- * minacloud-gateway
+ * minacloud-upms-infrastructure
  * %%
  * Copyright (C) 2021 - 2022 minacloud
  * %%
@@ -20,14 +20,24 @@ package com.minacloud.gateway;
  * #L%
  */
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.minacloud.common.base.BaseDO;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.Accessors;
+import org.springframework.data.relational.core.mapping.Table;
 
-@SpringBootApplication
-public class MinacloudGatewayApplication {
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+@Table("sys_role_menu")
+public class RoleMenuDO extends BaseDO<Long> {
 
-    public static void main(String[] args) {
-        SpringApplication.run(MinacloudGatewayApplication.class, args);
-    }
-
+    private Long roleId;
+    private Long menuId;
 }

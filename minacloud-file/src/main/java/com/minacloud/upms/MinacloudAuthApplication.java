@@ -1,8 +1,8 @@
-package com.minacloud.gateway;
+package com.minacloud.upms;
 
 /*-
  * #%L
- * minacloud-gateway
+ * minacloud-file
  * %%
  * Copyright (C) 2021 - 2022 minacloud
  * %%
@@ -24,10 +24,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MinacloudGatewayApplication {
+public class MinacloudAuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MinacloudGatewayApplication.class, args);
+        SpringApplication.run(MinacloudAuthApplication.class, args);
     }
 
 }

@@ -1,8 +1,8 @@
-package com.minacloud.gateway;
+package com.minacloud.upms.enmus;
 
 /*-
  * #%L
- * minacloud-gateway
+ * minacloud-upms-domain
  * %%
  * Copyright (C) 2021 - 2022 minacloud
  * %%
@@ -20,14 +20,16 @@ package com.minacloud.gateway;
  * #L%
  */
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.minacloud.common.base.BaseEnum;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-@SpringBootApplication
-public class MinacloudGatewayApplication {
+@Getter
+@AllArgsConstructor
+public enum UserType implements BaseEnum {
+    APP("app", "APP用户"),
+    PC("pc", "后管用户");
+    private final String code;
 
-    public static void main(String[] args) {
-        SpringApplication.run(MinacloudGatewayApplication.class, args);
-    }
-
+    private final String description;
 }

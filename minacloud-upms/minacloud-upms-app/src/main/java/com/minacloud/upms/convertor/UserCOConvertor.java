@@ -1,8 +1,8 @@
-package com.minacloud.gateway;
+package com.minacloud.upms.convertor;
 
 /*-
  * #%L
- * minacloud-gateway
+ * minacloud-upms-app
  * %%
  * Copyright (C) 2021 - 2022 minacloud
  * %%
@@ -20,14 +20,13 @@ package com.minacloud.gateway;
  * #L%
  */
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.minacloud.common.base.BaseConvertor;
+import com.minacloud.upms.domain.SysUser;
+import com.minacloud.upms.dto.clientobject.UserCO;
+import org.mapstruct.Mapper;
+import org.mapstruct.ReportingPolicy;
 
-@SpringBootApplication
-public class MinacloudGatewayApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(MinacloudGatewayApplication.class, args);
-    }
+@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
+public interface UserCOConvertor extends BaseConvertor<UserCO, SysUser> {
 
 }
