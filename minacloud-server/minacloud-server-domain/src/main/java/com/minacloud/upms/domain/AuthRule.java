@@ -42,7 +42,7 @@ public class AuthRule extends BaseEntity<Long> {
     private String title;
     private String backPath;
     private String frontPath;
-    private Long status;
+    private Integer status;
     private Long sort;
     private Long showed;
     private String icon;

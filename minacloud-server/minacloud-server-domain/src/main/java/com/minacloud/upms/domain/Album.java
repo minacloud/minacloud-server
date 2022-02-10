@@ -51,9 +51,9 @@ public class Album extends BaseEntity<Long> {
     private String originalPath;
     private String resourceType;
     private String localIdentifier;
-    private Long backup;
-    private Long status;
-    private Long type;
+    private Integer backup;
+    private Integer status;
+    private Integer type;
     private Long parentId;
 
 

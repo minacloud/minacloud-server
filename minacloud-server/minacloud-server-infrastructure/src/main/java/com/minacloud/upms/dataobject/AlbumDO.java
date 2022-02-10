@@ -51,7 +51,7 @@ public class AlbumDO extends BaseDO<Long> {
     private String resourceType;
     private String localIdentifier;
     private Long backup;
-    private Long status;
+    private Integer status;
     private Long type;
     private Long parentId;
 

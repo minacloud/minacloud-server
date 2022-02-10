@@ -39,7 +39,7 @@ public class AuthGroup extends BaseEntity<Long> {
 
 
     private String title;
-    private Long status;
+    private Integer status;
     private String rules;
 
 

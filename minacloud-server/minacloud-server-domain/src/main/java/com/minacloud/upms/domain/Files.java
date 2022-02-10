@@ -44,7 +44,7 @@ public class Files extends BaseEntity<Long> {
     private Long parentFileId;
     private String name;
     private String fileExtension;
-    private Long status;
+    private Integer status;
     private String category;
     private String contentHash;
     private String contentHashName;
@@ -56,11 +56,11 @@ public class Files extends BaseEntity<Long> {
     private String url;
     private String labels;
     private String path;
-    private Long deep;
-    private Long special;
-    private Long inPublic;
-    private Long share;
-    private Long favorite;
+    private Integer deep;
+    private Integer special;
+    private Integer inPublic;
+    private Integer share;
+    private Integer favorite;
     private String object;
 
 

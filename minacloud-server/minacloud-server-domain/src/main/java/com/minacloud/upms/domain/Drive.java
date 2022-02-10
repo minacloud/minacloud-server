@@ -42,8 +42,7 @@ public class Drive extends BaseEntity<Long> {
     private Long ployId;
     private String name;
     private String type;
-    private String addBy;
-    private Long capacity;
+    private Integer capacity;
 
 
 }

@@ -47,7 +47,7 @@ public class ShareDO extends BaseDO<Long> {
     private String passcode;
     private Date endTime;
     private String shareType;
-    private Long hasView;
+    private Integer hasView;
     private Long hasDown;
     private Long toUserId;
     private Long groupParentId;

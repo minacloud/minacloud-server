@@ -40,7 +40,7 @@ public class NotesDO extends BaseDO<Long> {
     private Long userId;
     private String title;
     private String content;
-    private Long feel;
+    private Integer feel;
     private String feeling;
     private String weather;
 

@@ -40,7 +40,7 @@ public class LibraryDO extends BaseDO<Long> {
     private Long userId;
     private String name;
     private String path;
-    private Long status;
+    private Integer status;
 
 
 }

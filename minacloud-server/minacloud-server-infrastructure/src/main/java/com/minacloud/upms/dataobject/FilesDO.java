@@ -43,7 +43,7 @@ public class FilesDO extends BaseDO<Long> {
     private Long parentFileId;
     private String name;
     private String fileExtension;
-    private Long status;
+    private Integer status;
     private String category;
     private String contentHash;
     private String contentHashName;

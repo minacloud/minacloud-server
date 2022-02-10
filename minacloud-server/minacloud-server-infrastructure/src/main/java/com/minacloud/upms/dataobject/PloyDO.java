@@ -39,7 +39,7 @@ public class PloyDO extends BaseDO<Long> {
 
     private String title;
     private String name;
-    private Long status;
+    private Integer status;
     private String path;
     private String region;
     private String endpoint;

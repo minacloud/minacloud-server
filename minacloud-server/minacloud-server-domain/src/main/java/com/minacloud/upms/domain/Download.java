@@ -39,7 +39,7 @@ public class Download extends BaseEntity<Long> {
 
     private Long userId;
     private Long driveId;
-    private Long status;
+    private Integer status;
     private Long type;
     private String src;
     private Long totalSize;

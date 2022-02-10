@@ -38,7 +38,7 @@ public class AuthGroupDO extends BaseDO<Long> {
 
 
     private String title;
-    private Long status;
+    private Integer status;
     private String rules;
 
 

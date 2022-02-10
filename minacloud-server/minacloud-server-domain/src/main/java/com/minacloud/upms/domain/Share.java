@@ -48,8 +48,8 @@ public class Share extends BaseEntity<Long> {
     private String passcode;
     private Date endTime;
     private String shareType;
-    private Long hasView;
-    private Long haswn;
+    private Integer hasView;
+    private Integer haswn;
     private Long toUserId;
     private Long groupParentId;
 
