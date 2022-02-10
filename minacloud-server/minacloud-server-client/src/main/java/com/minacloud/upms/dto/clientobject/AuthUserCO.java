@@ -15,25 +15,23 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.minacloud.upms.dto.cmd;
+package com.minacloud.upms.dto.clientobject;
 
-
-import com.alibaba.cola.dto.Command;
-import lombok.AllArgsConstructor;
+import com.minacloud.common.base.BaseDO;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 @Getter
 @Setter
-@Accessors(chain = true)
+@ToString
 @NoArgsConstructor
-@AllArgsConstructor
-public class UserDeleteCmd extends Command {
-    private Long id;
-
-    public static UserDeleteCmd of(Long id) {
-        return new UserDeleteCmd(id);
-    }
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class AuthUserCO extends BaseDO<Long> {
+    private Long userId;
+    private String rules;
 }
