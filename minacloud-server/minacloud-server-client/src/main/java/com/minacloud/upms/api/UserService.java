@@ -21,7 +21,7 @@ import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
-import com.minacloud.common.base.command.DeleteByIdCommand;
+import com.minacloud.common.base.command.IdCmd;
 import com.minacloud.common.base.query.IdQry;
 import com.minacloud.common.base.query.SingleParamQry;
 import com.minacloud.upms.dto.clientobject.UsersCO;
@@ -36,7 +36,7 @@ public interface UserService {
 
     Response updateUser(UserUpdateCmd cmd);
 
-    Response deleteUser(DeleteByIdCommand cmd);
+    Response deleteUser(IdCmd cmd);
 
     SingleResponse<UsersCO> findById(IdQry qry);
 

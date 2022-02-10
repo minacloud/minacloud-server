@@ -15,22 +15,20 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.minacloud.common.base.query;
+package com.minacloud.common.base.command;
 
 import com.alibaba.cola.dto.Command;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 import lombok.experimental.Accessors;
 
 @Getter
 @Setter
-@ToString
 @Accessors(chain = true)
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class IdCmd extends Command {
     private Long id;
 

@@ -20,7 +20,7 @@ package com.minacloud.upms.web;
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
-import com.minacloud.common.base.command.DeleteByIdCommand;
+import com.minacloud.common.base.command.IdCmd;
 import com.minacloud.common.base.query.IdQry;
 import com.minacloud.common.base.query.SingleParamQry;
 import com.minacloud.upms.api.UserService;
@@ -187,7 +187,7 @@ public class UserController {
      */
     @DeleteMapping(value = "/user/{id}")
     public Response delete(@PathVariable Long id) {
-        userService.deleteUser(DeleteByIdCommand.of(id));
+        userService.deleteUser(IdCmd.of(id));
         return Response.buildSuccess();
     }
 }

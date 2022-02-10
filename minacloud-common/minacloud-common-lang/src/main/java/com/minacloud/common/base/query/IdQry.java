@@ -17,6 +17,7 @@
  */
 package com.minacloud.common.base.query;
 
+import com.minacloud.common.base.command.IdCmd;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

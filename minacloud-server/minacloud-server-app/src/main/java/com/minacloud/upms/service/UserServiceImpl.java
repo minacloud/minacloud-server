@@ -21,7 +21,7 @@ import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
-import com.minacloud.common.base.command.DeleteByIdCommand;
+import com.minacloud.common.base.command.IdCmd;
 import com.minacloud.common.base.query.IdQry;
 import com.minacloud.common.base.query.SingleParamQry;
 import com.minacloud.upms.api.UserService;
@@ -71,7 +71,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Response deleteUser(DeleteByIdCommand cmd) {
+    public Response deleteUser(IdCmd cmd) {
         return userDeleteCmdExe.execute(cmd);
     }
 
