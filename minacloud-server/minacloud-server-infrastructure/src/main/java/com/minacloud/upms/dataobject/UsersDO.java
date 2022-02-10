@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dataobject;
 
-
 import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

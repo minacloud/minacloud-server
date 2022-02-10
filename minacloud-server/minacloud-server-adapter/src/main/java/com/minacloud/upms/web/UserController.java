@@ -17,16 +17,15 @@
  */
 package com.minacloud.upms.web;
 
-
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
+import com.minacloud.common.base.command.DeleteByIdCommand;
 import com.minacloud.common.base.query.IdQry;
 import com.minacloud.common.base.query.SingleParamQry;
 import com.minacloud.upms.api.UserService;
-import com.minacloud.upms.dto.clientobject.UserCO;
+import com.minacloud.upms.dto.clientobject.UsersCO;
 import com.minacloud.upms.dto.cmd.UserAddCmd;
-import com.minacloud.upms.dto.cmd.UserDeleteCmd;
 import com.minacloud.upms.dto.cmd.UserUpdateCmd;
 import com.minacloud.upms.dto.cmd.UserUpdatePwdCmd;
 import io.swagger.annotations.ApiOperation;
@@ -90,11 +89,11 @@ public class UserController {
     /**
      * 管理后台修改用户
      *
-     * @param userCO
+     * @param usersCO
      */
     @PutMapping("/user")
-    public Response updateSysUser(@RequestBody UserCO userCO) {
-        userService.updateUser(UserUpdateCmd.of(userCO));
+    public Response updateSysUser(@RequestBody UsersCO usersCO) {
+        userService.updateUser(UserUpdateCmd.of(usersCO));
         return Response.buildSuccess();
     }
 
@@ -117,7 +116,7 @@ public class UserController {
      * @return
      */
     @GetMapping("/user/{id}/roles")
-    public MultiResponse<UserCO> findRolesByUserId(@PathVariable Long id) {
+    public MultiResponse<UsersCO> findRolesByUserId(@PathVariable Long id) {
         return userService.findRolesByUserId(IdQry.of(id));
     }
 
@@ -128,7 +127,7 @@ public class UserController {
      */
     @ApiOperation(value = "用户查询列表")
     @GetMapping("/users")
-    public PageResponse<UserCO> findUsers() {
+    public PageResponse<UsersCO> findUsers() {
         return userService.findPage();
     }
 
@@ -171,12 +170,12 @@ public class UserController {
      * 用户自己修改密码
      */
     @PutMapping(value = "/user/password")
-    public Response resetPassword(@RequestBody UserCO userCO) {
+    public Response resetPassword(@RequestBody UsersCO usersCO) {
         UserUpdatePwdCmd cmd = new UserUpdatePwdCmd();
-        cmd.setUserId(userCO.getId());
-        cmd.setOldPassword(userCO.getOldPassword());
-        cmd.setNewPassword(userCO.getNewPassword());
-        cmd.setConfirmPassword(userCO.getNewPassword());
+        cmd.setUserId(usersCO.getId());
+        cmd.setOldPassword(usersCO.getOldPassword());
+        cmd.setNewPassword(usersCO.getNewPassword());
+        cmd.setConfirmPassword(usersCO.getNewPassword());
         userService.updatePassword(cmd);
         return Response.buildSuccess();
     }
@@ -188,9 +187,7 @@ public class UserController {
      */
     @DeleteMapping(value = "/user/{id}")
     public Response delete(@PathVariable Long id) {
-        userService.deleteUser(UserDeleteCmd.of(id));
+        userService.deleteUser(DeleteByIdCommand.of(id));
         return Response.buildSuccess();
     }
-
-
 }

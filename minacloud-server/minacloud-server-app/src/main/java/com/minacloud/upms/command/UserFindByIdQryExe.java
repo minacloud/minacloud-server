@@ -17,30 +17,25 @@
  */
 package com.minacloud.upms.command;
 
-
 import com.alibaba.cola.dto.SingleResponse;
 import com.minacloud.common.base.BaseCmdExecutor;
 import com.minacloud.common.base.query.IdQry;
 import com.minacloud.upms.convertor.UserCOConvertor;
 import com.minacloud.upms.domain.Users;
-import com.minacloud.upms.dto.clientobject.UserCO;
+import com.minacloud.upms.dto.clientobject.UsersCO;
 import com.minacloud.upms.gateway.UserGateway;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class UserFindByIdQryExe implements BaseCmdExecutor<IdQry, SingleResponse<UserCO>> {
-
+public class UserFindByIdQryExe implements BaseCmdExecutor<IdQry, SingleResponse<UsersCO>> {
     private final UserGateway userGateway;
-
     private final UserCOConvertor userCOConvertor;
 
     @Override
-    public SingleResponse<UserCO> execute(IdQry qry) {
+    public SingleResponse<UsersCO> execute(IdQry qry) {
         Users users = userGateway.findById(qry.getId());
         return SingleResponse.of(userCOConvertor.toSource(users));
     }
-
-
 }

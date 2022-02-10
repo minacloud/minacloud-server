@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base;
 
-
 import com.alibaba.cola.dto.Command;
 import com.alibaba.cola.dto.Response;
 import com.minacloud.common.utils.JsonUtil;
@@ -25,14 +24,12 @@ import com.minacloud.common.utils.JsonUtil;
 import java.lang.reflect.ParameterizedType;
 
 public abstract class BaseProcessor<P extends Command, R extends Response> {
-
     public abstract void checkParameter(P request);
 
     public abstract R process(P request);
 
     public P convert(Object request) {
         Class<P> rawType = (Class<P>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-
         return JsonUtil.parseObject(request.toString(), rawType);
     }
 }

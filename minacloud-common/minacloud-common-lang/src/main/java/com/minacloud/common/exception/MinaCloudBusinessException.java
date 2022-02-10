@@ -17,13 +17,11 @@
  */
 package com.minacloud.common.exception;
 
-
 import com.alibaba.cola.exception.BizException;
 import com.minacloud.common.result.ResultCode;
 
 public class MinaCloudBusinessException extends BizException {
     private static final long serialVersionUID = 1L;
-
     private final ResultCode resultCode;
 
     public MinaCloudBusinessException(ResultCode resultCode) {
@@ -34,7 +32,6 @@ public class MinaCloudBusinessException extends BizException {
     public MinaCloudBusinessException(ResultCode resultCode, String resultMessage) {
         super(resultCode.getResultCode(), resultMessage);
         this.resultCode = resultCode;
-
     }
 
     public ResultCode getErrorCode() {

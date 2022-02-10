@@ -17,11 +17,8 @@
  */
 package com.minacloud.upms.repository;
 
-
 import com.minacloud.upms.dataobject.PloyDO;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface PloyRepository extends PagingAndSortingRepository<PloyDO, Long> {
-
-
 }

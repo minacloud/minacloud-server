@@ -28,8 +28,6 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
-
     <artifactId>minacloud-common-jdbc</artifactId>
     <dependencies>
         <dependency>
@@ -49,8 +47,5 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
         </dependency>
-
     </dependencies>
-
-
 </project>

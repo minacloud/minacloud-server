@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dataobject;
 
-
 import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -35,14 +34,10 @@ import org.springframework.data.relational.core.mapping.Table;
 @Accessors(chain = true)
 @Table("minacloud_webdav")
 public class WebdavDO extends BaseDO<Long> {
-
-
     private Long userId;
     private Long driveId;
     private Long fileId;
     private String path;
     private String password;
     private String name;
-
-
 }

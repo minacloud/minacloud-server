@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base;
 
-
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.Optional;

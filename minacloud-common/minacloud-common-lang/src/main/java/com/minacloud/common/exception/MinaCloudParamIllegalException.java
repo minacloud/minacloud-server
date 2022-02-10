@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.exception;
 
-
 import com.minacloud.common.enums.DefaultResultCodeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -57,15 +56,12 @@ public class MinaCloudParamIllegalException extends MinaCloudBusinessException {
         }
     }
 
-
     @Getter
     @Setter
     @AllArgsConstructor
     public static class Detail {
         String property;
-
         String message;
-
         Object detail;
     }
 }

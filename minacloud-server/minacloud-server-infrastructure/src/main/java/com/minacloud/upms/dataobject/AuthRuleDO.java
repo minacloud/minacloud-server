@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dataobject;
 
-
 import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -35,8 +34,6 @@ import org.springframework.data.relational.core.mapping.Table;
 @Accessors(chain = true)
 @Table("minacloud_auth_rule")
 public class AuthRuleDO extends BaseDO<Long> {
-
-
     private Long parentId;
     private String title;
     private String backPath;
@@ -45,6 +42,4 @@ public class AuthRuleDO extends BaseDO<Long> {
     private Long sort;
     private Long showed;
     private String icon;
-
-
 }

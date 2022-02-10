@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.convertor;
 
-
 import com.minacloud.common.base.BaseConvertor;
 import com.minacloud.upms.dataobject.PloyDO;
 import com.minacloud.upms.domain.Ploy;
@@ -26,6 +25,4 @@ import org.mapstruct.ReportingPolicy;
 
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface PloyDOConvertor extends BaseConvertor<PloyDO, Ploy> {
-
-
 }

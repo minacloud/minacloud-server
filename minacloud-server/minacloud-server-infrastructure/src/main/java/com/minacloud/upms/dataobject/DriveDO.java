@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dataobject;
 
-
 import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -35,13 +34,9 @@ import org.springframework.data.relational.core.mapping.Table;
 @Accessors(chain = true)
 @Table("minacloud_drive")
 public class DriveDO extends BaseDO<Long> {
-
-
     private Long userId;
     private Long ployId;
     private String name;
     private String type;
     private Integer capacity;
-
-
 }

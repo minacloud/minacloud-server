@@ -17,16 +17,15 @@
  */
 package com.minacloud.upms.api;
 
-
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
+import com.minacloud.common.base.command.DeleteByIdCommand;
 import com.minacloud.common.base.query.IdQry;
 import com.minacloud.common.base.query.SingleParamQry;
-import com.minacloud.upms.dto.clientobject.UserCO;
+import com.minacloud.upms.dto.clientobject.UsersCO;
 import com.minacloud.upms.dto.cmd.UserAddCmd;
-import com.minacloud.upms.dto.cmd.UserDeleteCmd;
 import com.minacloud.upms.dto.cmd.UserUpdateCmd;
 import com.minacloud.upms.dto.cmd.UserUpdatePwdCmd;
 
@@ -37,21 +36,21 @@ public interface UserService {
 
     Response updateUser(UserUpdateCmd cmd);
 
-    Response deleteUser(UserDeleteCmd cmd);
+    Response deleteUser(DeleteByIdCommand cmd);
 
-    SingleResponse<UserCO> findById(IdQry qry);
+    SingleResponse<UsersCO> findById(IdQry qry);
 
-    PageResponse<UserCO> findPage();
+    PageResponse<UsersCO> findPage();
 
-    SingleResponse<UserCO> findByUsername(SingleParamQry qry);
+    SingleResponse<UsersCO> findByUsername(SingleParamQry qry);
 
-    SingleResponse<UserCO> findByMobile(SingleParamQry qry);
+    SingleResponse<UsersCO> findByMobile(SingleParamQry qry);
 
-    SingleResponse<UserCO> findByOpenId(SingleParamQry openId);
+    SingleResponse<UsersCO> findByOpenId(SingleParamQry openId);
 
     Response setRoleToUser(Long id, Set<Long> roleIds);
 
-    MultiResponse<UserCO> findRolesByUserId(IdQry qry);
+    MultiResponse<UsersCO> findRolesByUserId(IdQry qry);
 
     Response enableUser(IdQry qry);
 

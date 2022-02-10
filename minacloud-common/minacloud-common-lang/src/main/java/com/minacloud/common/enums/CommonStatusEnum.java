@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.enums;
 
-
 import com.minacloud.common.base.BaseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,7 +30,6 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum CommonStatusEnum implements BaseEnum {
-
     /**
      * 正常
      */
@@ -40,11 +38,9 @@ public enum CommonStatusEnum implements BaseEnum {
      * 禁用
      */
     DISABLED("1", "禁用");
-
     private final String code;
     /**
      * desc
      */
     private final String description;
-
 }

@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.utils;
 
-
 import cn.hutool.crypto.digest.BCrypt;
 
 public class PasswordUtil {
@@ -28,5 +27,4 @@ public class PasswordUtil {
     public static boolean match(String password, String encryptStr) {
         return BCrypt.checkpw(password, encryptStr);
     }
-
 }

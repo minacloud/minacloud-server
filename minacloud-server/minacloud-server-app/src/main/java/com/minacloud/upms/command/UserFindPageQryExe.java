@@ -17,13 +17,12 @@
  */
 package com.minacloud.upms.command;
 
-
 import com.alibaba.cola.dto.PageResponse;
 import com.minacloud.common.base.BaseCmdExecutor;
 import com.minacloud.common.base.query.IdQry;
 import com.minacloud.upms.convertor.UserCOConvertor;
 import com.minacloud.upms.domain.Users;
-import com.minacloud.upms.dto.clientobject.UserCO;
+import com.minacloud.upms.dto.clientobject.UsersCO;
 import com.minacloud.upms.gateway.UserGateway;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -31,17 +30,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class UserFindPageQryExe implements BaseCmdExecutor<IdQry, PageResponse<UserCO>> {
-
+public class UserFindPageQryExe implements BaseCmdExecutor<IdQry, PageResponse<UsersCO>> {
     private final UserGateway userGateway;
-
     private final UserCOConvertor userCOConvertor;
 
     @Override
-    public PageResponse<UserCO> execute(IdQry qry) {
+    public PageResponse<UsersCO> execute(IdQry qry) {
         Page<Users> page = userGateway.findPage();
         return PageResponse.of(userCOConvertor.toSource(page.getContent()), (int) page.getTotalElements(), page.getSize(), page.getNumber());
     }
-
-
 }

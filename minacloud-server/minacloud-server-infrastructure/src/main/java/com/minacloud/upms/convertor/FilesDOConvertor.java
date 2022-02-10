@@ -17,16 +17,12 @@
  */
 package com.minacloud.upms.convertor;
 
-
 import com.minacloud.common.base.BaseConvertor;
 import com.minacloud.upms.dataobject.FilesDO;
 import com.minacloud.upms.domain.Files;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
-
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface FilesDOConvertor extends BaseConvertor<FilesDO, Files> {
-
-
 }

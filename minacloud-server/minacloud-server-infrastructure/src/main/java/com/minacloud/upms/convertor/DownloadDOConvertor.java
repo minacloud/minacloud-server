@@ -17,16 +17,12 @@
  */
 package com.minacloud.upms.convertor;
 
-
 import com.minacloud.common.base.BaseConvertor;
 import com.minacloud.upms.dataobject.DownloadDO;
 import com.minacloud.upms.domain.Download;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
-
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface DownloadDOConvertor extends BaseConvertor<DownloadDO, Download> {
-
-
 }

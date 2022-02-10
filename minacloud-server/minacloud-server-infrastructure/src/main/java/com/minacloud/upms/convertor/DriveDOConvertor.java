@@ -17,16 +17,12 @@
  */
 package com.minacloud.upms.convertor;
 
-
 import com.minacloud.common.base.BaseConvertor;
 import com.minacloud.upms.dataobject.DriveDO;
 import com.minacloud.upms.domain.Drive;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
-
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface DriveDOConvertor extends BaseConvertor<DriveDO, Drive> {
-
-
 }

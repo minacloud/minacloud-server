@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base.query;
 
-
 import com.alibaba.cola.dto.Command;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

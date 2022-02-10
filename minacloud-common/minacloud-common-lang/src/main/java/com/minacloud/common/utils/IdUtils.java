@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.utils;
 
-
 import cn.hutool.core.util.IdUtil;
 
 /**

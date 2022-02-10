@@ -17,11 +17,9 @@
  */
 package com.minacloud.common.template;
 
-
 import com.minacloud.common.result.ResultCode;
 
 public interface ServiceCallback<R> {
-
     /**
      * check the input parameters
      */
@@ -44,5 +42,4 @@ public interface ServiceCallback<R> {
     R buildFailureResult(ResultCode resultCode, String errorMsg);
 
     void buildSuccessResult(R response);
-
 }

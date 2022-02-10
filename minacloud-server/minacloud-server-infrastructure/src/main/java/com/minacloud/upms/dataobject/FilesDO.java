@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dataobject;
 
-
 import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -35,8 +34,6 @@ import org.springframework.data.relational.core.mapping.Table;
 @Accessors(chain = true)
 @Table("minacloud_files")
 public class FilesDO extends BaseDO<Long> {
-
-
     private Long userId;
     private Long driveId;
     private Long fileId;
@@ -61,6 +58,4 @@ public class FilesDO extends BaseDO<Long> {
     private Long share;
     private Long favorite;
     private String object;
-
-
 }

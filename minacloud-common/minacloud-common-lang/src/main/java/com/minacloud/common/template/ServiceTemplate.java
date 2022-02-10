@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.template;
 
-
 import com.alibaba.cola.dto.Response;
 import com.minacloud.common.enums.DefaultResultCodeEnum;
 import com.minacloud.common.exception.MinaCloudBusinessException;
@@ -45,21 +44,16 @@ public class ServiceTemplate {
      * @param callback member callback template
      */
     public static <P, R> R execute(P request, String scenario, ServiceCallback<R> callback) {
-
         R response = null;
         try {
             // print invocation request log
             pointInvocationRequestLog(scenario, request);
-
             // parameter check
             parameterValidator(request, callback);
-
             // member process
             response = callback.process();
-
             // fill success response
             callback.buildSuccessResult(response);
-
         } catch (MinaCloudBusinessException e) {
             LogUtils.warn(log, e, request);
             ResultCode errorCode = e.getErrorCode();
@@ -67,7 +61,6 @@ public class ServiceTemplate {
         } catch (Throwable e) {
             LogUtils.error(log, e, request);
             response = callback.buildFailureResult(DefaultResultCodeEnum.UNKNOWN, e.getMessage());
-
         } finally {
             if (response instanceof Response) {
                 // print biz log
@@ -89,7 +82,6 @@ public class ServiceTemplate {
      */
     private static <R, T> void pointInvocationResponseLog(String scenario, Response result) {
         LogUtils.info(log, scenario, " invoke result:", JsonUtil.toJsonString(result));
-
     }
 
     /**
@@ -98,14 +90,12 @@ public class ServiceTemplate {
     private static <U> void parameterValidator(U request, ServiceCallback callback) {
         // parameter check
         Locale.setDefault(new Locale("en"));
-
         Set<ConstraintViolation<U>> constraintViolations;
         try {
             constraintViolations = ValidatorUtils.getValidator().validate(request);
         } catch (IllegalArgumentException e) {
             throw new MinaCloudParamIllegalException(e.getMessage());
         }
-
         if (!constraintViolations.isEmpty()) {
             ConstraintViolation<U> error = constraintViolations.iterator().next();
             throw new MinaCloudParamIllegalException(error.getPropertyPath() + " " + error.getMessage());
@@ -113,6 +103,4 @@ public class ServiceTemplate {
         // customize parameter check
         callback.checkParameter();
     }
-
 }
-

@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dataobject;
 
-
 import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -35,8 +34,6 @@ import org.springframework.data.relational.core.mapping.Table;
 @Accessors(chain = true)
 @Table("minacloud_download")
 public class DownloadDO extends BaseDO<Long> {
-
-
     private Long userId;
     private Long driveId;
     private Integer status;
@@ -53,6 +50,4 @@ public class DownloadDO extends BaseDO<Long> {
     private String dst;
     private Long zcstatus;
     private Double zcpersent;
-
-
 }

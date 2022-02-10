@@ -22,7 +22,6 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
-
 server:
   maxHttpHeaderSize: 50000000
   tomcat:
@@ -33,7 +32,6 @@ server:
       enabled: true
       charset: UTF-8
       force: true
-
 #logging:
 #  level:
 #    org:

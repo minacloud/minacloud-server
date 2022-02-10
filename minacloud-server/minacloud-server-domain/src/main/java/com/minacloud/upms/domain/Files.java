@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.domain;
 
-
 import com.alibaba.cola.domain.Entity;
 import com.minacloud.common.base.BaseEntity;
 import lombok.EqualsAndHashCode;
@@ -34,10 +33,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @Entity
-
 public class Files extends BaseEntity<Long> {
-
-
     private Long userId;
     private Long driveId;
     private Long fileId;
@@ -62,6 +58,4 @@ public class Files extends BaseEntity<Long> {
     private Integer share;
     private Integer favorite;
     private String object;
-
-
 }

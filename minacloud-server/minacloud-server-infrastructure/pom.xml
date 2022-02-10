@@ -27,11 +27,9 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
     <artifactId>minacloud-server-infrastructure</artifactId>
     <packaging>jar</packaging>
     <name>minacloud-server-infrastructure</name>
-
     <dependencies>
         <dependency>
             <groupId>com.minacloud</groupId>
@@ -46,12 +44,10 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.minacloud</groupId>
             <artifactId>minacloud-common-jdbc</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-
     </dependencies>
 </project>

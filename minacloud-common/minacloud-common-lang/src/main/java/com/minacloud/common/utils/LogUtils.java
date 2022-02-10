@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.utils;
 
-
 import com.minacloud.common.constant.MinaCloudConstants;
 import com.minacloud.common.tracer.TracerUtil;
 import org.slf4j.Logger;

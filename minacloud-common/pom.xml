@@ -28,11 +28,9 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
     <artifactId>minacloud-common</artifactId>
     <name>minacloud-common</name>
     <description>minacloud-common</description>
-
     <packaging>pom</packaging>
     <modules>
         <module>minacloud-common-lang</module>
@@ -40,5 +38,4 @@
         <module>minacloud-common-jdbc</module>
         <module>minacloud-common-swagger</module>
     </modules>
-
 </project>

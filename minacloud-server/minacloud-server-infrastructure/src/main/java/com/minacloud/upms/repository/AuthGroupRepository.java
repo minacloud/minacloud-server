@@ -17,11 +17,8 @@
  */
 package com.minacloud.upms.repository;
 
-
 import com.minacloud.upms.dataobject.AuthGroupDO;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface AuthGroupRepository extends PagingAndSortingRepository<AuthGroupDO, Long> {
-
-
 }

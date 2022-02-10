@@ -17,8 +17,7 @@
  */
 package com.minacloud.upms.dto.clientobject;
 
-
-import com.minacloud.common.base.BaseCO;
+import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,18 +31,22 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class UserCO extends BaseCO<Long> {
-    private String username;
-    private String nickname;
-    private String avatar;
-    private String phone;
-    private String sex;
-    private Boolean enabled;
-    private String type;
-    private String openId;
-
-    private String oldPassword;
-    private String newPassword;
-    private String confirmPassword;
-
+public class AlbumCO extends BaseDO<Long> {
+    private Long userId;
+    private Long driveId;
+    private String cover;
+    private String path;
+    private String name;
+    private String extension;
+    private String fileHash;
+    private String videoDuration;
+    private Long resourceSize;
+    private String thumbPath;
+    private String originalPath;
+    private String resourceType;
+    private String localIdentifier;
+    private Long backup;
+    private Integer status;
+    private Long type;
+    private Long parentId;
 }

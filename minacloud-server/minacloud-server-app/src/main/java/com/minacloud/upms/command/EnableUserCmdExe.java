@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.command;
 
-
 import com.alibaba.cola.dto.Response;
 import com.minacloud.common.base.BaseCmdExecutor;
 import com.minacloud.common.base.query.IdQry;
@@ -29,9 +28,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class EnableUserCmdExe implements BaseCmdExecutor<IdQry, Response> {
-
     private final UserGateway userGateway;
-
     private final UserCOConvertor userCOConvertor;
 
     @Override
@@ -39,6 +36,4 @@ public class EnableUserCmdExe implements BaseCmdExecutor<IdQry, Response> {
         userGateway.enableUser(qry.getId());
         return Response.buildSuccess();
     }
-
-
 }

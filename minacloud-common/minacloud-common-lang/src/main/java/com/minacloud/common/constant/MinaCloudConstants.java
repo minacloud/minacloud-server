@@ -17,12 +17,10 @@
  */
 package com.minacloud.common.constant;
 
-
 import java.time.format.DateTimeFormatter;
 
 public interface MinaCloudConstants {
     String RESULT_KEY = "result";
-
     /**
      * BUFFER_SIZE
      */
@@ -54,7 +52,6 @@ public interface MinaCloudConstants {
      * Constant <code>DEFAULT_DATE_TIME_FORMATTER="yyyy-MM-dd HH:mm:ss"</code>
      */
     DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME);
-
     /**
      * Constant <code>DEFAULT_PASSWORD="123456"</code>
      */

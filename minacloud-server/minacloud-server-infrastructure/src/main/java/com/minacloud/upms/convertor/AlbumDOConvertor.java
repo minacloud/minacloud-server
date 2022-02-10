@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.convertor;
 
-
 import com.minacloud.common.base.BaseConvertor;
 import com.minacloud.upms.dataobject.AlbumDO;
 import com.minacloud.upms.domain.Album;
@@ -26,5 +25,4 @@ import org.mapstruct.ReportingPolicy;
 
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface AlbumDOConvertor extends BaseConvertor<AlbumDO, Album> {
-
 }

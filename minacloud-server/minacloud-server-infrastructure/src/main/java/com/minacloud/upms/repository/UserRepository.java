@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.repository;
 
-
 import com.minacloud.upms.dataobject.UsersDO;
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
@@ -25,7 +24,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 
 public interface UserRepository extends PagingAndSortingRepository<UsersDO, Long> {
-
     @Modifying
     @Query("update minacloud_users set status=1 where id=:id")
     void enableUser(@Param("id") Long id);

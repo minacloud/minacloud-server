@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.domain;
 
-
 import com.alibaba.cola.domain.Entity;
 import com.minacloud.common.base.BaseEntity;
 import lombok.EqualsAndHashCode;
@@ -35,8 +34,6 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @Entity
 public class Download extends BaseEntity<Long> {
-
-
     private Long userId;
     private Long driveId;
     private Integer status;
@@ -53,6 +50,4 @@ public class Download extends BaseEntity<Long> {
     private String dst;
     private Long zcstatus;
     private Double zcpersent;
-
-
 }

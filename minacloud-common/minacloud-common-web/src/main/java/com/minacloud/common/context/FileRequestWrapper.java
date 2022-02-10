@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.context;
 
-
 import com.minacloud.common.enums.DefaultResultCodeEnum;
 import com.minacloud.common.exception.MinaCloudBusinessException;
 import org.springframework.util.FileCopyUtils;
@@ -29,17 +28,11 @@ import java.io.InputStream;
 import java.util.Arrays;
 
 public class FileRequestWrapper {
-
     private InputStream inputStream;
-
     private String name;
-
     private String originalFilename;
-
     private String contentType;
-
     private byte[] bytes = new byte[0];
-
 
     public FileRequestWrapper() {
     }

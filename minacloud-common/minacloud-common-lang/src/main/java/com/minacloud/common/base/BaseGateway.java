@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base;
 
-
 public interface BaseGateway<T, ID> {
     void create(T entity);
 

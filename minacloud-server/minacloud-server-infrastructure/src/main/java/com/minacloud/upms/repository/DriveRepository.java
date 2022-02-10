@@ -17,11 +17,8 @@
  */
 package com.minacloud.upms.repository;
 
-
 import com.minacloud.upms.dataobject.DriveDO;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface DriveRepository extends PagingAndSortingRepository<DriveDO, Long> {
-
-
 }

@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.enums;
 
-
 import com.minacloud.common.base.BaseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,7 +30,6 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum DeleteStatusEnum implements BaseEnum {
-
     /**
      * 正常
      */
@@ -43,12 +41,9 @@ public enum DeleteStatusEnum implements BaseEnum {
     /**
      * code
      */
-
     private String code;
     /**
      * desc
      */
     private String description;
-
 }
-

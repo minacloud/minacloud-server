@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.context;
 
-
 import com.minacloud.common.exception.MinaCloudBusinessException;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -53,7 +52,5 @@ public class WebRuntimeContext {
     private String version;
     private String appId;
     private MinaCloudBusinessException businessException;
-
     private List<FileRequestWrapper> files;
-
 }

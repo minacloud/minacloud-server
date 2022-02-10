@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.handler;
 
-
 import cn.hutool.core.text.CharSequenceUtil;
 import cn.hutool.core.util.ObjectUtil;
 import com.alibaba.cola.dto.Command;
@@ -65,7 +64,6 @@ public class HttpProcessHandler {
                 TracerUtil.logTraceId(webroot);
                 context.setTraceId(TracerUtil.getTracerId());
             }
-
             String requestURI = request.getRequestURI();
             context.setRequestUri(requestURI);
             context.setRequestUrl(request.getRequestURL().toString());
@@ -75,7 +73,6 @@ public class HttpProcessHandler {
             context.setServerPort(request.getServerPort());
             context.setScheme(request.getScheme());
             context.setServerName(request.getServerName());
-
             String requestBody = HttpToolUtils.getRequestData(request);
             context.setRequestBody(requestBody);
             String action = CharSequenceUtil.removePrefix(requestURI, "/");
@@ -84,7 +81,6 @@ public class HttpProcessHandler {
                 List<FileRequestWrapper> fileList = fileMap.values().stream().map(FileRequestWrapper::new).collect(Collectors.toList());
                 context.setFiles(fileList);
             }
-
             BaseProcessor<Command, Response> processor = ProcessorManager.getProcessorByAction(action);
             if (java.util.Objects.isNull(processor)) {
                 throw new MinaCloudBusinessException(DefaultResultCodeEnum.RES_NOT_FOUND, "Action Not Found");
@@ -116,7 +112,6 @@ public class HttpProcessHandler {
                 }
             });
             context.setResponseBody(JsonUtil.toJsonString(baseResponse));
-
         } catch (MinaCloudBusinessException e) {
             context.setBusinessException(e);
             handException(context);

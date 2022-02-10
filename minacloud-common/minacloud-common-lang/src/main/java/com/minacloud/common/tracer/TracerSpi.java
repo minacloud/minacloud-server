@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.tracer;
 
-
 import io.opentracing.Span;
 import io.opentracing.Tracer;
 import io.opentracing.Tracer.SpanBuilder;

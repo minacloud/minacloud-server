@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.context;
 
-
 public class WebRuntimeContextHolder {
     private static final ThreadLocal<WebRuntimeContext> WEB_CONTEXT_THREAD_LOCAL = new ThreadLocal<>();
 

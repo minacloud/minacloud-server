@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.annotation;
 
-
 import com.minacloud.common.validator.UniqueValidator;
 
 import javax.validation.Constraint;
@@ -48,4 +47,3 @@ public @interface Unique {
 
     UniqueColumn[] columns() default {};
 }
-

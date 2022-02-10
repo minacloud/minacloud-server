@@ -17,9 +17,8 @@
  */
 package com.minacloud.upms.dto.cmd;
 
-
 import com.alibaba.cola.dto.Command;
-import com.minacloud.upms.dto.clientobject.UserCO;
+import com.minacloud.upms.dto.clientobject.UsersCO;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -28,5 +27,5 @@ import lombok.experimental.Accessors;
 @Setter
 @Accessors(chain = true)
 public class UserAddCmd extends Command {
-    private UserCO user;
+    private UsersCO user;
 }

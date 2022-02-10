@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base.query;
 
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

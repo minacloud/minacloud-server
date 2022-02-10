@@ -31,7 +31,6 @@
     <artifactId>minacloud-server</artifactId>
     <name>minacloud-server</name>
     <description>minacloud-server</description>
-
     <modules>
         <module>minacloud-server-adapter</module>
         <module>minacloud-server-app</module>
@@ -75,5 +74,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>

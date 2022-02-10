@@ -17,7 +17,6 @@
  */
 package com.minacloud.swagger;
 
-
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,7 +26,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
 
 @Data
 @ConfigurationProperties("miacloud.swagger")
@@ -64,12 +62,10 @@ public class SwaggerProperties {
      * 联系人
      **/
     private Contact contact = new Contact();
-
     /**
      * swagger会解析的包路径
      **/
     private String basePackage = "";
-
     /**
      * swagger会解析的url规则
      **/
@@ -78,17 +74,14 @@ public class SwaggerProperties {
      * 在basePath基础上需要排除的url规则
      **/
     private List<String> excludePath = new ArrayList<>();
-
     /**
      * 分组文档
      **/
     private Map<String, DocketInfo> docket = new LinkedHashMap<>();
-
     /**
      * host信息
      **/
     private String host = "";
-
     /**
      * 全局参数配置
      **/
@@ -101,22 +94,18 @@ public class SwaggerProperties {
          * 参数名
          **/
         private String name;
-
         /**
          * 描述信息
          **/
         private String description;
-
         /**
          * 指定参数类型
          **/
         private String modelRef;
-
         /**
          * 参数放在哪个地方:header,query,path,body.form
          **/
         private String parameterType;
-
         /**
          * 参数是否必须传
          **/
@@ -149,14 +138,11 @@ public class SwaggerProperties {
          * 服务条款URL
          **/
         private String termsOfServiceUrl = "";
-
         private Contact contact = new Contact();
-
         /**
          * swagger会解析的包路径
          **/
         private String basePackage = "";
-
         /**
          * swagger会解析的url规则
          **/
@@ -165,7 +151,6 @@ public class SwaggerProperties {
          * 在basePath基础上需要排除的url规则
          **/
         private List<String> excludePath = new ArrayList<>();
-
         private List<GlobalOperationParameter> globalOperationParameters;
     }
 

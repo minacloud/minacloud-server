@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dataobject;
 
-
 import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -35,8 +34,6 @@ import org.springframework.data.relational.core.mapping.Table;
 @Accessors(chain = true)
 @Table("minacloud_album")
 public class AlbumDO extends BaseDO<Long> {
-
-
     private Long userId;
     private Long driveId;
     private String cover;
@@ -54,6 +51,4 @@ public class AlbumDO extends BaseDO<Long> {
     private Integer status;
     private Long type;
     private Long parentId;
-
-
 }

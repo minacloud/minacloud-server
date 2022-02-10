@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.config;
 
-
 import cn.hutool.core.util.ObjectUtil;
 import com.minacloud.common.base.BaseDO;
 import com.minacloud.common.utils.IdUtils;

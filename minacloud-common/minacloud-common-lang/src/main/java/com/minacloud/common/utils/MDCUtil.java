@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.utils;
 
-
 import com.minacloud.common.tracer.TracerUtil;
 import io.opentracing.Span;
 import org.slf4j.MDC;
@@ -47,5 +46,4 @@ public class MDCUtil {
     public static void clearTenantId() {
         MDC.remove(MDC_TENANT_ID);
     }
-
 }

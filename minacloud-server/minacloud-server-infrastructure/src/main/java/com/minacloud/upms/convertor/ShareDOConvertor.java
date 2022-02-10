@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.convertor;
 
-
 import com.minacloud.common.base.BaseConvertor;
 import com.minacloud.upms.dataobject.ShareDO;
 import com.minacloud.upms.domain.Share;
@@ -26,6 +25,4 @@ import org.mapstruct.ReportingPolicy;
 
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface ShareDOConvertor extends BaseConvertor<ShareDO, Share> {
-
-
 }

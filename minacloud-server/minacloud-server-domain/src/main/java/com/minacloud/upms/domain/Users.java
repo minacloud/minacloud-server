@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.domain;
 
-
 import com.alibaba.cola.domain.Entity;
 import com.minacloud.common.base.BaseEntity;
 import lombok.EqualsAndHashCode;
@@ -37,7 +36,6 @@ import java.util.Date;
 @Accessors(chain = true)
 @Entity
 public class Users extends BaseEntity<Long> {
-
     private String username;
     private String nickname;
     private String password;
@@ -49,5 +47,4 @@ public class Users extends BaseEntity<Long> {
     private Date lastLoginTime;
     private Integer status;
     private Integer loginCount;
-
 }

@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.manage;
 
-
 import com.minacloud.common.base.BaseProcessor;
 import lombok.Data;
 import org.springframework.stereotype.Component;

@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dataobject;
 
-
 import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -37,8 +36,6 @@ import java.util.Date;
 @Accessors(chain = true)
 @Table("minacloud_share")
 public class ShareDO extends BaseDO<Long> {
-
-
     private Long userId;
     private Long libraryId;
     private Long driveId;
@@ -51,6 +48,4 @@ public class ShareDO extends BaseDO<Long> {
     private Long hasDown;
     private Long toUserId;
     private Long groupParentId;
-
-
 }

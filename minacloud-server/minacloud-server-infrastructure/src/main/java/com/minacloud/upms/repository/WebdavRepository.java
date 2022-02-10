@@ -17,11 +17,8 @@
  */
 package com.minacloud.upms.repository;
 
-
 import com.minacloud.upms.dataobject.WebdavDO;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface WebdavRepository extends PagingAndSortingRepository<WebdavDO, Long> {
-
-
 }

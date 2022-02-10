@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.command;
 
-
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.cola.dto.Response;
 import com.minacloud.common.base.BaseCmdExecutor;
@@ -29,9 +28,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class UserUpdatePwdCmdExe implements BaseCmdExecutor<UserUpdatePwdCmd, Response> {
-
     private final UserGateway userGateway;
-
 
     @Override
     public Response execute(UserUpdatePwdCmd cmd) {
@@ -47,9 +44,6 @@ public class UserUpdatePwdCmdExe implements BaseCmdExecutor<UserUpdatePwdCmd, Re
             }
             userGateway.updatePassword(userId, cmd.getNewPassword());
         }
-
         return Response.buildSuccess();
     }
-
-
 }

@@ -17,12 +17,11 @@
  */
 package com.minacloud.upms.command;
 
-
 import com.alibaba.cola.dto.Response;
 import com.minacloud.common.base.BaseCmdExecutor;
 import com.minacloud.upms.convertor.UserCOConvertor;
 import com.minacloud.upms.domain.Users;
-import com.minacloud.upms.dto.clientobject.UserCO;
+import com.minacloud.upms.dto.clientobject.UsersCO;
 import com.minacloud.upms.dto.cmd.UserUpdateCmd;
 import com.minacloud.upms.gateway.UserGateway;
 import lombok.RequiredArgsConstructor;
@@ -31,18 +30,14 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class UserUpdateCmdExe implements BaseCmdExecutor<UserUpdateCmd, Response> {
-
     private final UserGateway userGateway;
-
     private final UserCOConvertor userCOConvertor;
 
     @Override
     public Response execute(UserUpdateCmd cmd) {
-        UserCO user = cmd.getUser();
+        UsersCO user = cmd.getUser();
         Users users = userCOConvertor.toTarget(user);
         userGateway.update(users);
         return Response.buildSuccess();
     }
-
-
 }

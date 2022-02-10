@@ -17,15 +17,12 @@
  */
 package com.minacloud.common.utils;
 
-
 import cn.hutool.core.util.StrUtil;
 
 import java.lang.invoke.SerializedLambda;
 import java.lang.reflect.Method;
 
 public class FieldUtil {
-
-
     public static <T> String getFieldName(PropertyFunc<T, ?> func) {
         try {
             // 通过获取对象方法，判断是否存在该方法

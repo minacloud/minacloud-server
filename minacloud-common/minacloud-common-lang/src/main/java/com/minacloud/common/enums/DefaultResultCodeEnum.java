@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.enums;
 
-
 import com.minacloud.common.result.ResultCode;
 import lombok.Getter;
 
@@ -58,7 +57,6 @@ public enum DefaultResultCodeEnum implements ResultCode {
      * Unknown
      */
     UNKNOWN(ResultStatusEnum.UNKNOWN, "Unknown");
-
     private final String resultStatus;
     private final String resultMessage;
 

@@ -17,11 +17,8 @@
  */
 package com.minacloud.upms.repository;
 
-
 import com.minacloud.upms.dataobject.ThumbDO;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface ThumbRepository extends PagingAndSortingRepository<ThumbDO, Long> {
-
-
 }

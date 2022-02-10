@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.config;
 
-
 import cn.dev33.satoken.stp.StpUtil;
 import com.minacloud.common.utils.LogUtils;
 import lombok.extern.slf4j.Slf4j;

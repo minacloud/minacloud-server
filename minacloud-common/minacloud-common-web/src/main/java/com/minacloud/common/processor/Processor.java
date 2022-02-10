@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.processor;
 
-
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RestController;

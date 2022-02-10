@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.enums;
 
-
 import com.minacloud.common.base.BaseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -37,8 +36,6 @@ public enum ResultStatusEnum implements BaseEnum {
      * unknown
      */
     UNKNOWN("U", "unknown");
-
     private String code;
     private String description;
-
 }

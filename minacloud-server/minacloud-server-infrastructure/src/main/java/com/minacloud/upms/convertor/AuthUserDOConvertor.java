@@ -17,16 +17,12 @@
  */
 package com.minacloud.upms.convertor;
 
-
 import com.minacloud.common.base.BaseConvertor;
 import com.minacloud.upms.dataobject.AuthUserDO;
 import com.minacloud.upms.domain.AuthUser;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
-
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface AuthUserDOConvertor extends BaseConvertor<AuthUserDO, AuthUser> {
-
-
 }

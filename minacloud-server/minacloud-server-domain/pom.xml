@@ -27,11 +27,9 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
     <artifactId>minacloud-server-domain</artifactId>
     <packaging>jar</packaging>
     <name>minacloud-server-domain</name>
-
     <dependencies>
         <dependency>
             <groupId>com.alibaba.cola</groupId>
@@ -48,6 +46,4 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-
-
 </project>

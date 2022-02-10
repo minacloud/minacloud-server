@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.tracer;
 
-
 import com.minacloud.common.utils.MDCUtil;
 import io.opentracing.Span;
 import io.opentracing.Tracer;
@@ -50,7 +49,6 @@ public class TracerUtil {
         return tracerSpi.createTracer(type);
     }
 
-
     public static void putSpan(Span span) {
         tracerSpi.putSpan(span);
     }
@@ -71,5 +69,3 @@ public class TracerUtil {
         return tracerSpi;
     }
 }
-
-

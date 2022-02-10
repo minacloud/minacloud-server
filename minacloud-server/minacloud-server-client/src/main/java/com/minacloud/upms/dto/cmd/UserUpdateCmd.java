@@ -17,9 +17,8 @@
  */
 package com.minacloud.upms.dto.cmd;
 
-
 import com.alibaba.cola.dto.Command;
-import com.minacloud.upms.dto.clientobject.UserCO;
+import com.minacloud.upms.dto.clientobject.UsersCO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,9 +31,9 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserUpdateCmd extends Command {
-    private UserCO user;
+    private UsersCO user;
 
-    public static UserUpdateCmd of(UserCO userCO) {
-        return new UserUpdateCmd(userCO);
+    public static UserUpdateCmd of(UsersCO usersCO) {
+        return new UserUpdateCmd(usersCO);
     }
 }

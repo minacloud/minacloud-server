@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.exception;
 
-
 import com.minacloud.common.enums.DefaultResultCodeEnum;
 import lombok.Getter;
 import lombok.Setter;

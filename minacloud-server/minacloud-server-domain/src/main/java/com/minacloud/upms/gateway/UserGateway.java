@@ -17,22 +17,14 @@
  */
 package com.minacloud.upms.gateway;
 
-
+import com.minacloud.common.base.BaseGateway;
 import com.minacloud.upms.domain.Users;
 import org.springframework.data.domain.Page;
 
-public interface UserGateway {
-    void create(Users user);
-
-    void update(Users user);
-
-    Users findById(Long userId);
-
+public interface UserGateway extends BaseGateway<Users, Long> {
     void enableUser(Long id);
 
     void disableUser(Long id);
-
-    void removeUser(Long id);
 
     Users findByOpenId(String param);
 

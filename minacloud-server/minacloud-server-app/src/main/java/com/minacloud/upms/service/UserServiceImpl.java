@@ -17,11 +17,11 @@
  */
 package com.minacloud.upms.service;
 
-
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.PageResponse;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
+import com.minacloud.common.base.command.DeleteByIdCommand;
 import com.minacloud.common.base.query.IdQry;
 import com.minacloud.common.base.query.SingleParamQry;
 import com.minacloud.upms.api.UserService;
@@ -36,9 +36,8 @@ import com.minacloud.upms.command.UserFindByUsernameQryExe;
 import com.minacloud.upms.command.UserFindPageQryExe;
 import com.minacloud.upms.command.UserUpdateCmdExe;
 import com.minacloud.upms.command.UserUpdatePwdCmdExe;
-import com.minacloud.upms.dto.clientobject.UserCO;
+import com.minacloud.upms.dto.clientobject.UsersCO;
 import com.minacloud.upms.dto.cmd.UserAddCmd;
-import com.minacloud.upms.dto.cmd.UserDeleteCmd;
 import com.minacloud.upms.dto.cmd.UserUpdateCmd;
 import com.minacloud.upms.dto.cmd.UserUpdatePwdCmd;
 import lombok.RequiredArgsConstructor;
@@ -72,32 +71,32 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Response deleteUser(UserDeleteCmd cmd) {
+    public Response deleteUser(DeleteByIdCommand cmd) {
         return userDeleteCmdExe.execute(cmd);
     }
 
     @Override
-    public SingleResponse<UserCO> findById(IdQry qry) {
+    public SingleResponse<UsersCO> findById(IdQry qry) {
         return userFindByIdQryExe.execute(qry);
     }
 
     @Override
-    public PageResponse<UserCO> findPage() {
+    public PageResponse<UsersCO> findPage() {
         return userFindPageQryExe.execute(null);
     }
 
     @Override
-    public SingleResponse<UserCO> findByUsername(SingleParamQry qry) {
+    public SingleResponse<UsersCO> findByUsername(SingleParamQry qry) {
         return userFindByUsernameQryExe.execute(qry);
     }
 
     @Override
-    public SingleResponse<UserCO> findByMobile(SingleParamQry qry) {
+    public SingleResponse<UsersCO> findByMobile(SingleParamQry qry) {
         return userFindByMobileQryExe.execute(qry);
     }
 
     @Override
-    public SingleResponse<UserCO> findByOpenId(SingleParamQry qry) {
+    public SingleResponse<UsersCO> findByOpenId(SingleParamQry qry) {
         return userFindByOpenIdQryExe.execute(qry);
     }
 
@@ -107,7 +106,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public MultiResponse<UserCO> findRolesByUserId(IdQry qry) {
+    public MultiResponse<UsersCO> findRolesByUserId(IdQry qry) {
         return null;
     }
 

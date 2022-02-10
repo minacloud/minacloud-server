@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dto.cmd;
 
-
 import com.alibaba.cola.dto.Command;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -35,6 +34,4 @@ public class UserUpdatePwdCmd extends Command {
     private String oldPassword;
     private String newPassword;
     private String confirmPassword;
-
-
 }

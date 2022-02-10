@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.utils;
 
-
 import com.minacloud.common.exception.MinaCloudParamIllegalException;
 
 import javax.validation.ConstraintViolation;
@@ -47,7 +46,6 @@ public final class ValidatorUtils {
         if (!violations.isEmpty()) {
             throw new MinaCloudParamIllegalException(violations.iterator().next().getMessage(), violations);
         }
-
         return bean;
     }
 }

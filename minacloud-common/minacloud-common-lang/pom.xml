@@ -28,7 +28,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>minacloud-common-lang</artifactId>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -71,6 +70,4 @@
             <artifactId>hutool-all</artifactId>
         </dependency>
     </dependencies>
-
-
 </project>

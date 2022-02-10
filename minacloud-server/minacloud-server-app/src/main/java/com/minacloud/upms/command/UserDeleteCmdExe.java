@@ -17,28 +17,23 @@
  */
 package com.minacloud.upms.command;
 
-
 import com.alibaba.cola.dto.Response;
 import com.minacloud.common.base.BaseCmdExecutor;
+import com.minacloud.common.base.command.DeleteByIdCommand;
 import com.minacloud.upms.convertor.UserCOConvertor;
-import com.minacloud.upms.dto.cmd.UserDeleteCmd;
 import com.minacloud.upms.gateway.UserGateway;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class UserDeleteCmdExe implements BaseCmdExecutor<UserDeleteCmd, Response> {
-
+public class UserDeleteCmdExe implements BaseCmdExecutor<DeleteByIdCommand, Response> {
     private final UserGateway userGateway;
-
     private final UserCOConvertor userCOConvertor;
 
     @Override
-    public Response execute(UserDeleteCmd cmd) {
-        userGateway.removeUser(cmd.getId());
+    public Response execute(DeleteByIdCommand cmd) {
+        userGateway.removeById(cmd.getId());
         return Response.buildSuccess();
     }
-
-
 }

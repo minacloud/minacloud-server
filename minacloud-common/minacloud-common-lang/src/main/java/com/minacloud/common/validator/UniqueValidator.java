@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.validator;
 
-
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.core.util.StrUtil;
@@ -43,8 +42,6 @@ import java.util.stream.Collectors;
  * @version $Id: $Id
  */
 public class UniqueValidator implements ConstraintValidator<Unique, Object> {
-
-
     private UniqueColumn[] columns;
     private String message;
 
@@ -86,17 +83,14 @@ public class UniqueValidator implements ConstraintValidator<Unique, Object> {
 
     private Map<String, Object> countRows(Object value) {
         List<Map<String, Object>> fieldValueCombos = new ArrayList<>();
-
         if (columns.length > 0) {
             fieldValueCombos = prepareColumns(value);
         }
-
         for (Map<String, Object> fieldMap : fieldValueCombos) {
             if (hasRecord(value, fieldMap)) {
                 return fieldMap;
             }
         }
-
         return null;
     }
 
@@ -114,7 +108,6 @@ public class UniqueValidator implements ConstraintValidator<Unique, Object> {
                         result.put(fieldName, val);
                         return result;
                     }
-
                     return fieldSetToMap(column.fields(), value);
                 })
                 .filter(item -> item.size() > 0)
@@ -134,5 +127,4 @@ public class UniqueValidator implements ConstraintValidator<Unique, Object> {
                 l -> l.isEmpty() ? new ArrayList<>() : l
         );
     }
-
 }

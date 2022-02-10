@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base;
 
-
 import com.alibaba.cola.dto.DTO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -27,7 +26,6 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import java.util.Date;
-
 
 @Getter
 @Setter
@@ -56,5 +54,4 @@ public abstract class BaseCO<PK> extends DTO {
      * 更新时间
      */
     private Date updateTime;
-
 }

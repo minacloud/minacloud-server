@@ -17,11 +17,8 @@
  */
 package com.minacloud.upms.repository;
 
-
 import com.minacloud.upms.dataobject.DownloadDO;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface DownloadRepository extends PagingAndSortingRepository<DownloadDO, Long> {
-
-
 }

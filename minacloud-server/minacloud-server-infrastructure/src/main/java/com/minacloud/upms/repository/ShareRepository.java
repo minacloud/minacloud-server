@@ -17,11 +17,8 @@
  */
 package com.minacloud.upms.repository;
 
-
 import com.minacloud.upms.dataobject.ShareDO;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface ShareRepository extends PagingAndSortingRepository<ShareDO, Long> {
-
-
 }

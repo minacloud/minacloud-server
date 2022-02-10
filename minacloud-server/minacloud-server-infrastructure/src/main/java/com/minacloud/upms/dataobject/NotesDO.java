@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.dataobject;
 
-
 import com.minacloud.common.base.BaseDO;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -35,14 +34,10 @@ import org.springframework.data.relational.core.mapping.Table;
 @Accessors(chain = true)
 @Table("minacloud_notes")
 public class NotesDO extends BaseDO<Long> {
-
-
     private Long userId;
     private String title;
     private String content;
     private Integer feel;
     private String feeling;
     private String weather;
-
-
 }

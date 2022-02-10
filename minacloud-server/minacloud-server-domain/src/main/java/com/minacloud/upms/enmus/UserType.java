@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.enmus;
 
-
 import com.minacloud.common.base.BaseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,6 +27,5 @@ public enum UserType implements BaseEnum {
     APP("app", "APP用户"),
     PC("pc", "后管用户");
     private final String code;
-
     private final String description;
 }

@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base;
 
-
 import cn.hutool.core.util.ObjectUtil;
 import com.alibaba.cola.dto.DTO;
 import lombok.EqualsAndHashCode;
@@ -34,7 +33,6 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.domain.Persistable;
 
 import java.util.Date;
-
 
 @Getter
 @Setter
@@ -68,7 +66,6 @@ public abstract class BaseDO<PK> extends DTO implements Persistable<PK> {
      */
     @LastModifiedDate
     private Date updateTime;
-
     /**
      * 是否删除
      */

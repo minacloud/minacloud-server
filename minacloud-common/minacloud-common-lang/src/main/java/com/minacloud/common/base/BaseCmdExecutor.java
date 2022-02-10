@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base;
 
-
 import com.alibaba.cola.dto.Command;
 import com.alibaba.cola.dto.Response;
 

@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.processor;
 
-
 import cn.hutool.core.text.CharSequenceUtil;
 import com.minacloud.common.base.BaseProcessor;
 import com.minacloud.common.enums.DefaultResultCodeEnum;

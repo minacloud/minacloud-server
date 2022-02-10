@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base;
 
-
 import java.util.Collection;
 import java.util.List;
 
@@ -29,7 +28,6 @@ import java.util.List;
  * @date 2018-11-23
  */
 public interface BaseConvertor<S, T> {
-
     /**
      * DTO转Entity
      *
@@ -61,7 +59,6 @@ public interface BaseConvertor<S, T> {
      * @return /
      */
     List<S> toSource(Collection<T> targetList);
-
 
     /**
      * DTO集合转Entity集合

@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.domain;
 
-
 import com.alibaba.cola.domain.Entity;
 import com.minacloud.common.base.BaseEntity;
 import lombok.EqualsAndHashCode;
@@ -36,10 +35,7 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @Entity
-
 public class Share extends BaseEntity<Long> {
-
-
     private Long userId;
     private Long libraryId;
     private Long driveId;
@@ -52,6 +48,4 @@ public class Share extends BaseEntity<Long> {
     private Integer haswn;
     private Long toUserId;
     private Long groupParentId;
-
-
 }

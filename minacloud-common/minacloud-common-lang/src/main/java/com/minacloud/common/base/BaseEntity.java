@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.base;
 
-
 import com.alibaba.cola.dto.DTO;
 import com.minacloud.common.utils.ValidatorUtils;
 import lombok.EqualsAndHashCode;
@@ -28,7 +27,6 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import java.util.Date;
-
 
 @Getter
 @Setter
@@ -70,9 +68,7 @@ public abstract class BaseEntity<PK> extends DTO {
      */
     private Boolean deleted;
 
-
     public void tryValidate(Class<?>... groups) {
         ValidatorUtils.tryValidate(this, groups);
     }
-
 }

@@ -17,7 +17,6 @@
  */
 package com.minacloud.upms.gateway;
 
-
 import cn.hutool.core.util.StrUtil;
 import com.minacloud.common.constant.MinaCloudConstants;
 import com.minacloud.common.utils.PasswordUtil;
@@ -62,6 +61,17 @@ public class UserGatewayImpl implements UserGateway {
     }
 
     @Override
+    public void removeById(Long id) {
+        userRepository.deleteById(id);
+    }
+
+    @Override
+    public void remove(Users user) {
+        UsersDO usersDO = userDOConvertor.toSource(user);
+        userRepository.delete(usersDO);
+    }
+
+    @Override
     public void enableUser(Long id) {
         userRepository.enableUser(id);
     }
@@ -72,16 +82,10 @@ public class UserGatewayImpl implements UserGateway {
     }
 
     @Override
-    public void removeUser(Long id) {
-
-    }
-
-    @Override
     public Users findByOpenId(String param) {
         UsersDO usersDO = userRepository.findByUsername(param);
         return userDOConvertor.toTarget(usersDO);
     }
-
 
     @Override
     public Page<Users> findPage() {

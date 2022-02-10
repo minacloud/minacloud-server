@@ -27,11 +27,9 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-
     <artifactId>minacloud-server-adapter</artifactId>
     <packaging>jar</packaging>
     <name>minacloud-server-adapter</name>
-
     <dependencies>
         <dependency>
             <groupId>com.minacloud</groupId>
@@ -51,9 +49,5 @@
             <artifactId>minacloud-common-swagger</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-
-
     </dependencies>
-
-
 </project>

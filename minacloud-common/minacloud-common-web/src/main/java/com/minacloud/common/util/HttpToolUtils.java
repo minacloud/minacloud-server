@@ -17,7 +17,6 @@
  */
 package com.minacloud.common.util;
 
-
 import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.text.CharSequenceUtil;
 import cn.hutool.core.util.StrUtil;
@@ -67,7 +66,6 @@ public class HttpToolUtils {
             response.addHeader(MinaCloudConstants.CONTENT_TYPE_HEADER, MinaCloudConstants.CONTENT_TYPE_JSON_UTF8);
             response.getWriter().write(context.getResponseBody());
         } catch (Exception e) {
-
             LogUtils.error(log, "exception=", e.getMessage());
         }
     }
@@ -88,4 +86,3 @@ public class HttpToolUtils {
                 }).filter(StrUtil::isNotBlank).collect(Collectors.joining(" & "));
     }
 }
-
