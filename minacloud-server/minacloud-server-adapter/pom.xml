@@ -41,11 +41,6 @@
         </dependency>
         <dependency>
             <groupId>com.minacloud</groupId>
-            <artifactId>minacloud-common-web</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.minacloud</groupId>
             <artifactId>minacloud-common-swagger</artifactId>
             <version>${project.parent.version}</version>
         </dependency>

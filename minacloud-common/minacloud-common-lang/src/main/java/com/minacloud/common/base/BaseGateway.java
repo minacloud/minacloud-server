@@ -17,6 +17,8 @@
  */
 package com.minacloud.common.base;
 
+import java.util.List;
+
 public interface BaseGateway<T, ID> {
     void create(T entity);
 
@@ -27,4 +29,6 @@ public interface BaseGateway<T, ID> {
     void removeById(ID id);
 
     void remove(T entity);
+
+    void saveAll(List<T> list);
 }

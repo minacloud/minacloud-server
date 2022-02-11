@@ -35,15 +35,7 @@
             <groupId>com.minacloud</groupId>
             <artifactId>minacloud-server-domain</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.minacloud</groupId>
-            <artifactId>minacloud-common-lang</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.minacloud</groupId>
             <artifactId>minacloud-common-jdbc</artifactId>

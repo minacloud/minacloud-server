@@ -41,3 +41,13 @@ server:
 #            JdbcTemplate: debug
 #            namedparam:
 #              NamedParameterJdbcTemplate: debug
+
+minacloud:
+  minio:
+    endpoint: http://127.0.0.1:9000
+    accessKey: minioadmin
+    secretKey: minioadmin
+    bucket-name: test
+    allow-file-type: jpg,png,jpeg,zip,rar,doc,docx,xls,xlsx,img,iso
+    # 分片上传有效期: 秒
+    chunk-upload-expiry-second: 86400

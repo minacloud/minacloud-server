@@ -34,7 +34,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>minacloud-common-lang</module>
-        <module>minacloud-common-web</module>
         <module>minacloud-common-jdbc</module>
         <module>minacloud-common-swagger</module>
     </modules>

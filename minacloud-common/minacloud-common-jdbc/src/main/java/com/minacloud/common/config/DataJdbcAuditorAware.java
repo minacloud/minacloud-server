@@ -18,7 +18,6 @@
 package com.minacloud.common.config;
 
 import cn.dev33.satoken.stp.StpUtil;
-import com.minacloud.common.utils.LogUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jdbc.repository.config.EnableJdbcAuditing;
@@ -29,14 +28,14 @@ import java.util.Optional;
 @Slf4j
 @Component
 @EnableJdbcAuditing
-public class DataJdbcAuditorAware implements AuditorAware<Long> {
+public class DataJdbcAuditorAware implements AuditorAware<String> {
     @Override
-    public Optional<Long> getCurrentAuditor() {
-        long loginId = 1;
+    public Optional<String> getCurrentAuditor() {
+        String loginId = "system";
         try {
-            loginId = StpUtil.getLoginIdAsLong();
+            loginId = StpUtil.getLoginIdAsString();
         } catch (Exception e) {
-            LogUtils.error(log, "获取当前登录用户失败");
+            log.error("获取当前登录用户失败");
         }
         return Optional.of(loginId);
     }

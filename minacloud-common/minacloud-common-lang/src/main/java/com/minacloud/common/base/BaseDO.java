@@ -32,6 +32,7 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.domain.Persistable;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Getter
@@ -40,7 +41,7 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
 @Accessors(chain = true)
-public abstract class BaseDO<PK> extends DTO implements Persistable<PK> {
+public abstract class BaseDO<PK> extends DTO implements Persistable<PK>, Serializable {
     /**
      * 主键 ID
      */
