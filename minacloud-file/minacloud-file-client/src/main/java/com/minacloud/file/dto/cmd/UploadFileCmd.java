@@ -1,4 +1,4 @@
-package com.minacloud.file.dto.qry;
+package com.minacloud.file.dto.cmd;
 
 import com.alibaba.cola.dto.Command;
 import lombok.Getter;
@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class UploadInfoQry extends Command {
+public class UploadFileCmd extends Command {
 
     private String fileName;
 
@@ -16,7 +16,7 @@ public class UploadInfoQry extends Command {
 
     private Double fileSize;
 
-    private Double chunkSize;
+    private Double chunkSize = (double) (10 * 1024 * 1024);
 
-    private String contentType;
+    private String contentType = "application/octet-stream";
 }

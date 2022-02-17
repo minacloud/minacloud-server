@@ -7,8 +7,8 @@ import com.minacloud.common.base.query.SingleParamQry;
 import com.minacloud.file.dto.FileOperationResult;
 import com.minacloud.file.dto.FileShardingResult;
 import com.minacloud.file.dto.cmd.MergeMultipartCmd;
+import com.minacloud.file.dto.cmd.UploadFileCmd;
 import com.minacloud.file.dto.qry.ListUploadPartsQry;
-import com.minacloud.file.dto.qry.UploadInfoQry;
 
 public interface FileService {
     /**
@@ -17,7 +17,7 @@ public interface FileService {
      * @param param 参数
      * @return
      */
-    SingleResponse<FileShardingResult> getUploadId(UploadInfoQry qry);
+    SingleResponse<FileShardingResult> getUploadId(UploadFileCmd qry);
 
     /**
      * 检查文件是否存在

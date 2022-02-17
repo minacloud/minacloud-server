@@ -16,9 +16,9 @@ import com.minacloud.file.dto.clientobject.FileUploadInfoCO;
 import com.minacloud.file.dto.cmd.MergeMultipartCmd;
 import com.minacloud.file.dto.cmd.SaveFileChunkInfoCmd;
 import com.minacloud.file.dto.cmd.SaveFileUploadInfoCmd;
+import com.minacloud.file.dto.cmd.UploadFileCmd;
 import com.minacloud.file.dto.qry.FileChunkInfoQry;
 import com.minacloud.file.dto.qry.ListUploadPartsQry;
-import com.minacloud.file.dto.qry.UploadInfoQry;
 import com.minacloud.file.emuns.FileStatusEnum;
 import com.minacloud.file.helper.MinioHelper;
 import lombok.AllArgsConstructor;
@@ -44,7 +44,7 @@ public class FileServiceImpl implements FileService {
 
 
     @Override
-    public SingleResponse<FileShardingResult> getUploadId(UploadInfoQry param) {
+    public SingleResponse<FileShardingResult> getUploadId(UploadFileCmd param) {
         FileShardingResult fileShardingResult;
         SingleResponse<FileUploadInfoCO> minioFileUploadInfo = this.fileUploadInfoService.getByFileMd5(SingleParamQry.of(param.getFileMd5()));
         if (ObjectUtil.isNull(minioFileUploadInfo.getData())) {
