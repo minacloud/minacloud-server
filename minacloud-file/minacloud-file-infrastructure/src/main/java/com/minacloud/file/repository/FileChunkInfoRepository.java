@@ -1,5 +1,5 @@
 /*
- * minacloud-server-infrastructure - minacloud-server
+ * minacloud-file-infrastructure - minacloud
  * Copyright © 2021 minacloud (lslvxy@gmail.com)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,6 @@
 package com.minacloud.file.repository;
 
 import com.minacloud.file.dataobject.FileChunkInfoDO;
-import com.minacloud.file.domain.FileChunkInfo;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.util.List;
